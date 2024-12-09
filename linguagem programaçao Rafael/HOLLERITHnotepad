@@ -1,0 +1,26 @@
+algoritmo hollerith;
+
+// Professor   : RAFAEL
+
+
+variáveis 
+   sal_bruto,sal_liquido,inss,fgts,horas_trab,horas_extras,val_hora:real;
+
+fim-variáveis 
+início
+   imprima ("horas trabalhadas:");
+   horas_trab:=leia ();
+   imprima("horas extras:");
+   horas_extras:=leia();
+   imprima("valor pago por hora:");
+   val_hora:=leia();
+   sal_bruto:=(horas_trab+(horas_extras*(1+1)))*val_hora;
+   inss :=(sal_bruto*0.09);
+   fgts:=(sal_bruto*0.08);
+   sal_liquido:=(sal_bruto-inss);
+ imprima ("valor Salario bruto"," ","R$",sal_bruto);
+ imprima ("valor desc. INSS"," ","R$",inss);
+ imprima ("valor desc. FGTS"," ","R$",fgts);
+ imprima ("valor Salario liquido"," ","R$",sal_liquido);
+   
+fim
